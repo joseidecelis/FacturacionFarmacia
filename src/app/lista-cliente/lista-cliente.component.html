@@ -1,0 +1,33 @@
+<button [routerLink]="'/ingresoCliente'" id="btncrear" type="button" class="btn btn-dark">Crear Cliente</button>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Fecha Nacimiento</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Ali</td>
+        <td>Son</td>
+        <td>ali@gmail.com</td>
+        <td>1000-10-10</td>
+        <td>
+            <ul class="list-inline m-0">
+                <li class="list-inline-item">
+                    <button id="btnEdit" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+                </li>
+                <li class="list-inline-item">
+                    <button id="btnDelete" class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                </li>
+            </ul>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
