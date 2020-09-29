@@ -11,6 +11,8 @@ import { IngresoClienteComponent } from './ingreso-cliente/ingreso-cliente.compo
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 import { CrearFacturaComponent } from './crear-factura/crear-factura.component';
 import { DetallesClienteComponent } from './detalles-cliente/detalles-cliente.component';
+import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component';
+import { ListaProductoComponent } from './lista-producto/lista-producto.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { DetallesClienteComponent } from './detalles-cliente/detalles-cliente.co
     IngresoClienteComponent,
     BienvenidaComponent,
     CrearFacturaComponent,
-    DetallesClienteComponent
+    DetallesClienteComponent,
+    DetallesProductoComponent,
+    ListaProductoComponent
   ],
   imports: [
     BrowserModule,
