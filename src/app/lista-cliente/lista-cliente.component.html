@@ -8,6 +8,8 @@
         <th>Email</th>
         <th>Fecha Nacimiento</th>
         <th>Acciones</th>
+        <th>Crear Facturas</th>
+        <th>Detalles</th>
       </tr>
     </thead>
     <tbody>
@@ -20,14 +22,19 @@
         <td>
             <ul class="list-inline m-0">
                 <li class="list-inline-item">
-                    <button id="btnEdit" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button>
+                    <button [routerLink]="'/ingresoCliente'" id="btnEdit" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><img src="../../assets/icon/Edit_icon-icons.com_71853.png" alt=""></button>
                 </li>
                 <li class="list-inline-item">
-                    <button id="btnDelete" class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                    <button id="btnDelete" class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><img src="../../assets/icon/seo-social-web-network-internet_262_icon-icons.com_61518.png" alt=""></button>
                 </li>
             </ul>
         </td>
-        
+        <td>
+          <button [routerLink]="'/crearfactura'" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Crear">Crear Factura</button>
+        </td>
+        <td>
+          <button [routerLink]="'/detallescliente'" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Crear">Detalles</button>
+        </td>
       </tr>
     </tbody>
   </table>

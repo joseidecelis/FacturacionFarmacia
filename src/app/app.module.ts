@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ListaClienteComponent } from './lista-cliente/lista-cliente.component';
 import { IngresoClienteComponent } from './ingreso-cliente/ingreso-cliente.component';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
+import { CrearFacturaComponent } from './crear-factura/crear-factura.component';
+import { DetallesClienteComponent } from './detalles-cliente/detalles-cliente.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { BienvenidaComponent } from './bienvenida/bienvenida.component';
     FooterComponent,
     ListaClienteComponent,
     IngresoClienteComponent,
-    BienvenidaComponent
+    BienvenidaComponent,
+    CrearFacturaComponent,
+    DetallesClienteComponent
   ],
   imports: [
     BrowserModule,
