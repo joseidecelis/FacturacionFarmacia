@@ -1,19 +1,35 @@
-<div>
+<div class="contenedor">
+<div class="izquierda">
     <button [routerLink]="'/ingresoProducto'" id="btncrear" type="button" class="btn btn-info">Crear Producto</button>
     <table class="table">
         <thead class="thead-dark">
           <tr>
             <th>Producto</th>
+            <th>Stock</th>
             <th>Precio</th>
+            <th>Detalles</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>
-                <a [routerLink]="'/detallesproductos'">Mascarilla</a>
-               </td>
-            <td>$2.000</td>
+                Mascarilla
+            </td>
+            <td>
+              10
+            </td>
+            <td>
+              $2.000
+            </td>
+            <td>
+              <button routerLink='detallesproductos' class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Crear">Detalles</button>
+            </td>
           </tr>
+
         </tbody>
     </table>
+</div>
+<div class="derecha">
+  <router-outlet></router-outlet>
+</div>
 </div>

@@ -16,8 +16,10 @@ const routes: Routes = [
   {path: 'ingresoProducto',component: IngresoClienteComponent},
   {path: 'crearfactura',component: CrearFacturaComponent},
   {path: 'detallescliente',component: DetallesClienteComponent},
-  {path: 'listaproductos',component: ListaProductoComponent},
-  {path: 'detallesproductos',component: DetallesProductoComponent}
+  {path: 'listaproductos',component: ListaProductoComponent, children:[
+    {path: 'detallesproductos',component: DetallesProductoComponent}
+  ]}
+
 ];
 
 @NgModule({
