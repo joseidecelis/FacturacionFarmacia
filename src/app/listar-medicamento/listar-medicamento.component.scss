@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+  }
+  .paginacion{
+    display: flex;
+    justify-content: space-around;
+  
+  }
+  .contTable{
+  max-width: 600px;
+  min-width: 400px;
+  margin-right: 5em;
+  margin-left: 10em;
+  }
+  .testTable{
+    display: flex;
+  }
+  .derecha{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+              box-shadow: 0px 3px 6px #00000059;
+  }

@@ -11,13 +11,12 @@ import { Medicamento } from '../dto/medicamento';
 export class ListaProductoComponent implements OnInit {
 
   medicamentos: Medicamento[];
-  medicamento: Medicamento= new Medicamento();
+  medicamentoss: Medicamento= new Medicamento();
 
   constructor(private medService: MedicamentoService,
               private rute: Router) { }
 
   ngOnInit(): void {
-
     this.medService.getAll().subscribe(
       (resp) => {
         this.medicamentos = resp;
@@ -27,4 +26,12 @@ export class ListaProductoComponent implements OnInit {
     );
   }
 
+  eliminar(id:number){
+    this.medService.deleteMedicamento(id)
+    .subscribe(data=>{
+      this.ngOnInit();
+      alert("usuario eliminado")
+    })
+  }
+ 
 }

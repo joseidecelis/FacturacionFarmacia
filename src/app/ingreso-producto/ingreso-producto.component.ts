@@ -45,7 +45,7 @@ export class IngresoProductoComponent implements OnInit {
     this.medService.guardar(this.medicamento).subscribe(
       (resp) => {
         alert('Guardado correctamente');
-        this.rute.navigate(['listaproductos']);
+        this.rute.navigate(['listamedicamento']);
       }, (error) => {
         console.log(error);
       }

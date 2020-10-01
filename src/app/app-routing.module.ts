@@ -1,18 +1,16 @@
-import { TablaTestComponent } from './tabla-test/tabla-test.component';
 import { IngresoProductoComponent } from './ingreso-producto/ingreso-producto.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component';
-import { ListaProductoComponent } from './lista-producto/lista-producto.component';
 import { LoginComponent } from './login/login.component';
+import { ListarMedicamentoComponent } from './listar-medicamento/listar-medicamento.component';
 
 
 const routes: Routes = [
-  {path: 'tabla', component: TablaTestComponent},
-  {path: 'login', component: LoginComponent},
+  {path: "", component: LoginComponent},
   {path: 'ingresoProducto',component: IngresoProductoComponent},
-  {path: 'listaproductos',component: ListaProductoComponent, children:[
-    {path: 'detallesproductos',component: DetallesProductoComponent}
+  {path: 'listamedicamento',component: ListarMedicamentoComponent, children:[
+    {path: 'detallesmedicamento/:id',component: DetallesProductoComponent}
   ]}
 
 ];

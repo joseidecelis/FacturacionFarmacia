@@ -10,10 +10,10 @@ import { FooterComponent } from './footer/footer.component';
 import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component';
 import { ListaProductoComponent } from './lista-producto/lista-producto.component';
 import { IngresoProductoComponent } from './ingreso-producto/ingreso-producto.component';
-import { TablaTestComponent } from './tabla-test/tabla-test.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../app/material-module';
 import { FormsModule } from '@angular/forms';
+import { ListarMedicamentoComponent } from './listar-medicamento/listar-medicamento.component';
 
 
 @NgModule({
@@ -25,7 +25,7 @@ import { FormsModule } from '@angular/forms';
     DetallesProductoComponent,
     ListaProductoComponent,
     IngresoProductoComponent,
-    TablaTestComponent,
+    ListarMedicamentoComponent,
 
 
 
