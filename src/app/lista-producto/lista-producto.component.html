@@ -12,22 +12,23 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let row of medicamentos">
             <td>
-                Mascarilla
+                {{row.nombre}}
             </td>
             <td>
-              10
+              {{row.cantidad}}
             </td>
             <td>
-              $2.000
+              {{row.precio}}
             </td>
             <td>
               <button routerLink='detallesproductos' class="btn btn-info btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="detalles">Detalles</button>
             </td>
             <td>
-              <button [routerLink]="'/ingresoProducto'" class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="editar">Editar</button>
+              <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="editar">Editar</button>
               <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="eliminar">Eliminar</button>
+              <button [routerLink] = "['ingresoProducto']" [queryParams]="{ id: medicamento.id}">Editar</button>
             </td>
           </tr>
         </tbody>
