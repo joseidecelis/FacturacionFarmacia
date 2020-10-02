@@ -14,6 +14,7 @@ import { MaterialModule } from '../app/material-module';
 import { FormsModule } from '@angular/forms';
 import { ListarMedicamentoComponent } from './listar-medicamento/listar-medicamento.component';
 import { DetallesComponent } from './detalles/detalles.component';
+import { PrimeraComponent } from './primera/primera.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { DetallesComponent } from './detalles/detalles.component';
     IngresoProductoComponent,
     ListarMedicamentoComponent,
     DetallesComponent,
+    PrimeraComponent,
 
 
 

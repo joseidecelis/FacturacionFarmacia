@@ -1,5 +1,5 @@
 .login-dark {
-  height:550px;
+  min-height: 100vh;
   background:#475d62 url(../../assets/icon/chemical.jpg);
   background-size:cover;
   position:relative;
@@ -20,7 +20,7 @@
 }
 
 .login-dark .illustration {
-  background: url(../../assets/icon/Grup.png) no-repeat padding-box center center;
+  background: url(../../assets/icon/medicina.svg) no-repeat padding-box center center;
   padding:50px;
   font-size:100px;
   margin-bottom: 10px;
@@ -68,4 +68,9 @@
 
 .login-dark .form .btn-primary:active {
   transform:translateY(1px);
+}
+p{
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 30px;
 }

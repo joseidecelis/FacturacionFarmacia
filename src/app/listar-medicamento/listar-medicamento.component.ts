@@ -43,7 +43,6 @@ export class ListarMedicamentoComponent implements OnInit {
       this.medService.deleteMedicamento(id)
         .subscribe(data => {
           this.ngOnInit();
-          alert("usuario eliminado");
         })
 
     }

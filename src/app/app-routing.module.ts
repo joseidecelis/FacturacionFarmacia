@@ -1,3 +1,4 @@
+import { PrimeraComponent } from './primera/primera.component';
 import { IngresoProductoComponent } from './ingreso-producto/ingreso-producto.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -8,14 +9,14 @@ import { DetallesComponent } from './detalles/detalles.component';
 
 
 const routes: Routes = [
-  {path: '', component: LoginComponent},
-  {path: 'listamedicamento',component: ListarMedicamentoComponent, children:[
-    {path: 'detallesmedicamento/:id',component: DetallesProductoComponent},
-    {path: 'ingresoProducto',component: IngresoProductoComponent},
-    {path: '',component: DetallesComponent}
-
-
-  ]}
+  { path: "", component: LoginComponent },
+  { path: "primera", component: PrimeraComponent, children: [
+    { path: '', component: ListarMedicamentoComponent, children: [
+        { path: 'detallesmedicamento/:id', component: DetallesProductoComponent },
+        { path: 'ingresoProducto', component: IngresoProductoComponent },
+        { path: '', component: DetallesComponent }
+      ]}
+    ]}
 
 ];
 

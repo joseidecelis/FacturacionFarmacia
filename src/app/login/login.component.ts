@@ -19,12 +19,11 @@ export class LoginComponent implements OnInit {
   }
 
   ingresar(): void {
-    console.log(this.user.nombreUsuario, this.user.claveUsuario);
-    console.log(this.user);
+
     this.loginService.login(this.user).subscribe(
       (resp) => {
         if(resp){
-        this.route.navigate(['listamedicamento']);
+        this.route.navigate(["/primera"]);
         }else{
           alert("Vayase de aquí, impostor");
         }
