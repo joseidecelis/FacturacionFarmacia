@@ -10,7 +10,9 @@ const routes: Routes = [
   {path: "", component: LoginComponent},
   {path: 'ingresoProducto',component: IngresoProductoComponent},
   {path: 'listamedicamento',component: ListarMedicamentoComponent, children:[
-    {path: 'detallesmedicamento/:id',component: DetallesProductoComponent}
+    {path: 'detallesmedicamento/:id',component: DetallesProductoComponent},
+    {path: 'ingresoProducto',component: IngresoProductoComponent},
+
   ]}
 
 ];

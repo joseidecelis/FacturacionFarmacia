@@ -8,7 +8,6 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetallesProductoComponent } from './detalles-producto/detalles-producto.component';
-import { ListaProductoComponent } from './lista-producto/lista-producto.component';
 import { IngresoProductoComponent } from './ingreso-producto/ingreso-producto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../app/material-module';
@@ -23,7 +22,6 @@ import { ListarMedicamentoComponent } from './listar-medicamento/listar-medicame
     HeaderComponent,
     FooterComponent,
     DetallesProductoComponent,
-    ListaProductoComponent,
     IngresoProductoComponent,
     ListarMedicamentoComponent,
 
