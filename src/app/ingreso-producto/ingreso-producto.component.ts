@@ -15,7 +15,6 @@ export class IngresoProductoComponent implements OnInit {
   id: number;
   constructor(private _location: Location,
               private medService: MedicamentoService,
-              private rute: Router,
               private activeR: ActivatedRoute)
   {}
 
@@ -35,8 +34,6 @@ export class IngresoProductoComponent implements OnInit {
               }, (error) => {
               }
             )
-          }else{
-            this.medicamento = new Medicamento();
           }
         }
       )
@@ -45,7 +42,6 @@ export class IngresoProductoComponent implements OnInit {
     this.medService.guardar(this.medicamento).subscribe(
       (resp) => {
         alert('Guardado correctamente');
-        this.rute.navigate(['listamedicamento']);
       }, (error) => {
         console.log(error);
       }

@@ -13,7 +13,7 @@
         <!-- Name Column -->
         <ng-container matColumnDef="precio">
           <th mat-header-cell *matHeaderCellDef> Precio </th>
-          <td mat-cell *matCellDef="let element"> {{element.precio}} </td>
+          <td mat-cell *matCellDef="let element"> $ {{element.precio}} </td>
         </ng-container>
 
         <!-- Stock Column -->
@@ -24,12 +24,12 @@
 
          <!-- Actions Column -->
          <ng-container matColumnDef="actions">
-          <th mat-header-cell *matHeaderCellDef> Acciones </th>
+          <th id="acciones" mat-header-cell *matHeaderCellDef> Acciones </th>
           <td mat-cell *matCellDef="let element">
             <button routerLink="detallesmedicamento/{{element.id}}"  mat-stroked-button color='primary'>
               <mat-icon>description</mat-icon>
             </button>
-            <button mat-stroked-button >
+            <button routerLink= "ingresoProducto/" [queryParams] = "{id:element.id}" mat-stroked-button >
               <mat-icon>edit</mat-icon>
             </button>
             <button (click)="eliminar(element.id)" mat-stroked-button color="warn">
@@ -49,4 +49,4 @@
     <div class="derecha">
       <router-outlet></router-outlet>
     </div>
-    </div>
+</div>

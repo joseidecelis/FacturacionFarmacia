@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../app/material-module';
 import { FormsModule } from '@angular/forms';
 import { ListarMedicamentoComponent } from './listar-medicamento/listar-medicamento.component';
+import { DetallesComponent } from './detalles/detalles.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { ListarMedicamentoComponent } from './listar-medicamento/listar-medicame
     DetallesProductoComponent,
     IngresoProductoComponent,
     ListarMedicamentoComponent,
+    DetallesComponent,
 
 
 

@@ -2,8 +2,8 @@ import { Router } from '@angular/router';
 import { MedicamentoService } from './../service/medicamento.service';
 import { Medicamento } from './../dto/medicamento';
 import { AfterViewInit, Component, ViewChild, OnInit } from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatTableDataSource} from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-listar-medicamento',
@@ -20,11 +20,11 @@ export class ListarMedicamentoComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private medService: MedicamentoService,
-              private rute: Router) { }
+    private rute: Router) { }
   ngOnInit(): void {
     this.medService
-    .getAll()
-    .subscribe( medicamentos => (this.dataSource.data = medicamentos));
+      .getAll()
+      .subscribe(medicamentos => (this.dataSource.data = medicamentos));
 
     /*  {
         this.medicamentos = resp;
@@ -33,16 +33,21 @@ export class ListarMedicamentoComponent implements OnInit {
       }
     ); */
   }
-  ngAfterViewInit():void {
-    
+  ngAfterViewInit(): void {
+
     this.dataSource.paginator = this.paginator;
   }
-  eliminar(id:number){
-    this.medService.deleteMedicamento(id)
-    .subscribe(data=>{
-      this.ngOnInit();
-      alert("usuario eliminado")
-    })
+  eliminar(id: number) {
+    let r = confirm("Seguro que desea eliminar?");
+    if (r) {
+      this.medService.deleteMedicamento(id)
+        .subscribe(data => {
+          this.ngOnInit();
+          alert("usuario eliminado");
+        })
+
+    }
+
   }
 
 }
