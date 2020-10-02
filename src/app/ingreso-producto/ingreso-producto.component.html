@@ -33,15 +33,15 @@
           </div>
       </div>
       <div class="form-group row">
-          <label for="contraindicadores" class="col-form-label col-sm-3" required >Contraindicacion</label>
+          <label for="contraindicadores" class="col-form-label col-sm-3" >Contraindicacion</label>
           <div class="col-sm-6">
-              <input type="text" class="form-control" name="contraindicadores" [(ngModel)] = "medicamento.contraindicacion">
+              <input  required type="text" class="form-control" name="contraindicadores" [(ngModel)] = "medicamento.contraindicacion">
           </div>
       </div>
       <div class="form-group row">
-          <label for="laboratorio" class="col-form-label col-sm-3" required>Laboratorio</label>
+          <label for="laboratorio" class="col-form-label col-sm-3" >Laboratorio</label>
           <div class="col-sm-6">
-              <input type="text" class="form-control" name="laboratorio" [(ngModel)] = "medicamento.laboratorio">
+              <input required type="text" class="form-control" name="laboratorio" [(ngModel)] = "medicamento.laboratorio">
           </div>
       </div>
         <div class="btnguardar">
