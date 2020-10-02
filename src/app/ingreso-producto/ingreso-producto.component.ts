@@ -13,11 +13,13 @@ export class IngresoProductoComponent implements OnInit {
 
   medicamento: Medicamento = new Medicamento();
   id: number;
+
   constructor(private _location: Location,
-    private medService: MedicamentoService,
-    private activeR: ActivatedRoute) { }
+              private medService: MedicamentoService,
+              private activeR: ActivatedRoute) { }
 
   ngOnInit(): void {
+
     this.activeR.queryParams
       .subscribe(
         params => {
@@ -33,6 +35,7 @@ export class IngresoProductoComponent implements OnInit {
         }
       )
   }
+
   guardarMedicamento(): void {
     this.medService.guardar(this.medicamento).subscribe(
       (resp) => {
@@ -52,4 +55,5 @@ export class IngresoProductoComponent implements OnInit {
   backClicked(): void {
     this._location.back();
   }
+
 }

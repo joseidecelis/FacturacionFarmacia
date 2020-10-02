@@ -20,33 +20,30 @@ export class ListarMedicamentoComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private medService: MedicamentoService,
-    private rute: Router) { }
+              private rute: Router) { }
+
   ngOnInit(): void {
+
     this.medService
       .getAll()
       .subscribe(medicamentos => (this.dataSource.data = medicamentos));
 
-    /*  {
-        this.medicamentos = resp;
-      }, (error) => {
-        console.log(error);
-      }
-    ); */
   }
+
   ngAfterViewInit(): void {
 
     this.dataSource.paginator = this.paginator;
   }
+
   eliminar(id: number) {
+
     let r = confirm("Seguro que desea eliminar?");
     if (r) {
       this.medService.deleteMedicamento(id)
         .subscribe(data => {
           this.ngOnInit();
         })
-
     }
-
   }
 
 }
